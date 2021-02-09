@@ -1,0 +1,339 @@
+@import './font.css';
+@import './markdown.css';
+
+/* Mobile */
+:root {
+  /* Colors  */
+  --bg-a: #000000;
+  --bg-b: #111111;
+  --bg-t: rbga(0, 0, 0, 0.4);
+  --fg-a: #FFFFFF;
+  --fg-b: #F5F5F5;
+
+  --gr-a: #424242;
+  --gr-b: #818181;
+  --gr-c: #969696;
+
+  --sc-a: #333333;
+  --sc-b: #555555;
+
+  --hg: #2e2e2e;
+
+  --selection: rgba(255, 255, 255, 0.99);
+
+  --header-b: rgba(17, 17, 17, 0.7);
+
+  /* Widths */
+  --main-content: 768px;
+
+  /* Radius */
+  --radius: 4px;
+
+  /* Transitions */
+  --transition: 0.1s ease-in-out;
+  --transition-slow: 0.3s ease-in-out;
+
+  /* Spacing */
+  --gap: 1rem;
+  --gap-a: 0.5rem;
+  --gap-b: 0.75rem;
+  --gap-c: 1.25rem;
+  --gap-d: 2rem;
+  --gap-e: 4rem;
+
+  /* Typography */
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  --font-mono: 'Lucida Console', 'Consolas', 'Liberation Mono',
+    monospace;
+}
+
+[data-theme='light'] {
+  /* Colors  */
+  --bg-a: #FFFFFF;
+  --bg-b: #F5F5F5;
+  --bg-t: rbga(255, 255, 255, 0.7);
+  --fg-a: #000000;
+  --fg-b: #111111;
+
+  --gr-a: #CCCCCC;
+  --gr-b: #777777;
+  --gr-c: #555555;
+
+  --sc-a: #CCCCCC;
+  --sc-b: #AAAAAA;
+
+  --header-b: rgba(245, 245, 245, 0.8);
+
+  --selection: rgba(0, 0, 0, 0.99);
+
+  --hg: #aeaeae;
+}
+
+/* Selection */
+::selection {
+  text-shadow: none;
+  background: var(--selection);
+  color: var(--bg-a);
+}
+
+/* Spacers */
+
+.space {
+  flex: 1 1 auto;
+}
+
+/* Colors */
+.gr-a {
+  color: var(--gr-a);
+}
+.gr-b {
+  color: var(--gr-b);
+}
+.gr-c {
+  color: var(--gr-c);
+}
+
+/* Text Align */
+.t-cn {
+  text-align: center;
+}
+
+/* Display */
+
+.d-fl {
+  display: flex;
+}
+
+.d-in {
+  display: inline;
+}
+
+/* Sketches */
+
+.sketch-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  padding-bottom: var(--gap);
+}
+
+.p5Canvas {
+  border: 2px solid var(--gr-b);
+  border-radius: var(--radius);
+  width: 33vmax !important;
+  height: 33vmax !important;
+}
+
+.sketchTitle {
+  margin-right: var(--gap);
+}
+
+/* Input Reset */
+
+input:required {
+  box-shadow:none;
+}
+input:invalid {
+  box-shadow: none;
+}
+
+input:-moz-placeholder,
+input:focus {
+  box-shadow:none !important;
+}
+
+textarea:required {
+  box-shadow:none;
+}
+textarea:invalid {
+  box-shadow: none;
+}
+
+textarea:-moz-placeholder,
+textarea:focus {
+  box-shadow:none !important;
+}
+
+input,
+button,
+textarea {
+  font-family: 'Inter';
+  border: none;
+  resize: none;
+}
+
+
+input:focus, textarea:focus, select:focus, button:focus{
+  outline: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+html,
+body {
+  font-size: 16px;
+  background: var(--bg-b);
+  color: var(--fg-b);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font-sans);
+  display: flex;
+  flex-direction: column;
+}
+
+p,
+li {
+  letter-spacing: -0.33px;
+  font-size: 1.125rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  line-height: 1.75;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 1.25;
+  letter-spacing: -0.89px;
+}
+
+h2 {
+  font-size: 2rem;
+  letter-spacing: -0.69px;
+}
+
+h3 {
+  font-size: 1.5rem;
+  letter-spacing: -0.47px;
+}
+
+h4 {
+  font-size: 1.25rem;
+  letter-spacing: -0.33px;
+}
+
+hr {
+  border: none;
+  border-bottom: 1px solid var(--gr-a);
+}
+
+blockquote {
+  margin: 0;
+  padding-left: 1rem;
+  border-left: 2px solid var(--gr-b);
+}
+
+button {
+  border: none;
+  padding: 0;
+  margin: 0;
+  line-height: inherit;
+  font-size: inherit;
+}
+
+p a,
+a.reset {
+  outline: none;
+  color: var(--fg);
+  text-decoration: none;
+}
+
+p a:hover,
+p a:focus,
+p a:active,
+a.reset:hover,
+a.reset:focus {
+  color: var(--gr);
+}
+
+pre,
+code {
+  font-family: var(--font-mono);
+}
+
+flex {
+  display: flex;
+}
+
+kbd {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  padding: 2px 7px;
+  font-weight: 600;
+  background: var(--gr-a);
+  border-radius: 5px;
+}
+
+summary {
+  cursor: pointer;
+  outline: none;
+}
+
+details {
+  background: var(--sc-a);
+  border-radius: var(--radius);
+  padding: 1rem;
+}
+
+/* Desktop */
+@media screen and (min-width: 30em) {
+  :root {
+    --gap: 4rem;
+    --gap-a: 0.5rem;
+    --gap-b: 0.75rem;
+    --gap-c: 1.25rem;
+    --gap-d: 2rem;
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 30em) and (max-width: 60em) {
+  :root {
+    --gap: 4rem;
+    --gap-a: 0.5rem;
+    --gap-b: 0.75rem;
+    --gap-c: 1.25rem;
+    --gap-d: 2rem;
+  }
+}
+
+/* No Scrollbars */
+@-moz-document url-prefix() {
+  html {
+      scrollbar-width: none;
+  }
+}
+
+:-webkit-scrollbar {
+  width: 0px;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+*,
+*:focus,
+*:hover {
+  outline: none;
+}
+
+body {
+  margin: 0;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  overflow-y: scroll;
+}

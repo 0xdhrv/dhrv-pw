@@ -1,0 +1,32 @@
+.reset {
+  outline: none;
+  color: var(--fg-a);
+  text-decoration: none;
+}
+
+.gray {
+  color: var(--gr-b);
+}
+
+.gray:hover,
+.gray:focus {
+  color: var(--fg-a);
+}
+
+.underline {
+  outline: none;
+  color: var(--fg-a);
+  text-decoration: none;
+
+  background-image: linear-gradient(to right, var(--gr-b), var(--gr-b));
+  background-size: 100% 1px;
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  text-shadow: 0.1em 0 var(--bg-a), -0.1em 0 var(--bg-a), 0.05em 0 var(--bg-a),
+    -0.05em 0 var(--bg-a);
+}
+
+.underline:hover,
+.underline:focus {
+  color: var(--gr-b);
+}

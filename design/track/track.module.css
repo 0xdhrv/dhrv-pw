@@ -1,0 +1,28 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid var(--gr-c);
+  border-radius: var(--radius);
+  padding: var(--gap-a);
+}
+
+.image {
+  filter: grayscale(100%);
+}
+
+.title {
+  font-size: 1.5rem;
+  padding: 0;
+}
+
+.song {
+  margin-left: var(--gap);
+  display: flex;
+  flex-direction: column;
+}
+
+.song p {
+  padding: 0;
+  margin: 0;
+}

@@ -1,0 +1,27 @@
+.container {
+  max-width: var(--main-content);
+  margin: 0 auto;
+}
+
+.button {
+  margin-top: var(--gap-a);
+  width: 100%;
+  cursor: pointer;
+  border-radius: var(--radius);
+  color: var(--gray);
+  font-weight: 500;
+  background: var(--gray-c);
+  border: none;
+  padding: var(--gap-a) var(--gap);
+  transition: background-color var(--transition), color var(--transition);
+  outline: none;
+}
+
+.button:hover,
+.button:focus {
+  color: var(--fg);
+}
+
+.button:active {
+  background-color: var(--gr-c);
+}

@@ -1,0 +1,14 @@
+.main {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: var(--gap);
+  padding-right: var(--gap);
+  max-width: var(--main-content);
+  animation: fadein 2s;
+  height: 100%;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}

@@ -1,0 +1,23 @@
+.footer {
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: var(--gap-d);
+  margin-bottom: var(--gap-c);
+  padding-left: var(--gap);
+  padding-right: var(--gap);
+  padding-top: var(--gap-c);
+  padding-bottom: var(--gap-c);
+  max-width: var(--main-content);
+  width: 100%;
+  *zoom: 1;
+  display: flex;
+  /*  */
+  /* z-index: 10; */
+  /* position: sticky; */
+  /* top: 0; */
+  /* background-color: var(--footer-b); */
+  /* backdrop-filter: saturate(180%) blur(20px); */
+}
+
+.footer:before, .footer:after { content: " "; display: table; }
+.footer:after { clear: both; }
